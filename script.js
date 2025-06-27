@@ -12,12 +12,12 @@ const accounts = [
 ];
 
 const fxRates = {
-  "USD-KES": 150,
-  "KES-USD": 1 / 150,
-  "USD-NGN": 1000,
-  "NGN-USD": 1 / 1000,
-  "KES-NGN": 6.7,
-  "NGN-KES": 1 / 6.7
+  "USD-KES": 129,
+  "KES-USD": 1 / 129,
+  "USD-NGN": 1549,
+  "NGN-USD": 1 / 1549,
+  "KES-NGN": 11,
+  "NGN-KES": 1 / 11
 };
 
 const accountsList = document.getElementById("accountsList");
