@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Treasury Movement Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Treasury Movement Simulator</h1>
+  </header>
+
+  <main>
+    <section class="accounts">
+      <h2>Accounts Overview</h2>
+      <div id="accountsList" class="grid"></div>
+    </section>
+
+    <section class="form-section">
+      <h2>Transfer Funds</h2>
+      
+<p id="formMessage" style="color: red; font-weight: bold;"></p>
+
+      <form id="transferForm">
+        <label>From Account:
+          <select id="fromAccount"></select>
+        </label>
+        <label>To Account:
+          <select id="toAccount"></select>
+        </label>
+        <label>Amount:
+          <input type="number" id="amount" min="0" required />
+        </label>
+        <label>Note:
+          <textarea id="note" rows="2" placeholder="Optional note..."></textarea>
+        </label>
+        <label>Future Date (Optional):
+          <input type="date" id="futureDate" />
+        </label>
+        <button type="submit">Submit Transfer</button>
+      </form>
+    </section>
+
+    <section class="filters">
+      <h2>Filter Transactions</h2>
+      <p id="filterMessage" style="margin-top: 1rem; font-weight: bold;"></p>
+      <select id="filterAccount"><option value="">All Accounts</option></select>
+      <select id="filterCurrency"><option value="">All Currencies</option></select>
+    </section>
+
+    <section class="log">
+      <h2>Transaction Log</h2>
+      <table id="logTable">
+        <thead>
+          <tr><th>Date</th><th>From</th><th>To</th><th>Amount</th><th>FX Rate</th><th>Note</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

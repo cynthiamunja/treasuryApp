@@ -1,0 +1,168 @@
+
+:root {
+  --primary: #2c3e50;
+  --secondary: #34495e;
+  --accent: #1abc9c;
+  --background: #ecf0f1;
+  --white: #fff;
+  --gray: #bdc3c7;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background);
+  color: var(--primary);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Section styling */
+section {
+  background-color: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+/* Grid layout for accounts */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* Form styling */
+form {
+  display: grid;
+  gap: 1rem;
+}
+.form-section form {
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.form-section{
+  width: 400px; 
+  margin: 0 auto;
+    gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  
+}
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+input, select, textarea, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 4px var(--accent);
+}
+
+button {
+  background-color: var(--accent);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #16a085;
+}
+
+/* Filter section styling */
+.filters select {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  min-width: 180px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gray);
+}
+
+th {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#formMessage, #filterMessage {
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .filters select {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+}
